@@ -1,0 +1,39 @@
+CREATE DATABASE IF NOT EXISTS media_dashboard DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE media_dashboard;
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `username` VARCHAR(50) NOT NULL UNIQUE,
+  `password` VARCHAR(255) NOT NULL,
+  `role` VARCHAR(20) DEFAULT 'admin',
+  `create_time` DATETIME DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `douyin_data` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `account_name` VARCHAR(100) NOT NULL,
+  `play_count` INT DEFAULT 0,
+  `like_count` INT DEFAULT 0,
+  `comment_count` INT DEFAULT 0,
+  `share_count` INT DEFAULT 0,
+  `create_time` DATETIME DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `kuaishou_data` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `exposure` INT DEFAULT 0,
+  `viewers` INT DEFAULT 0,
+  `duration` VARCHAR(50) DEFAULT '0min',
+  `create_time` DATETIME DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `media_data` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `platform` VARCHAR(50) NOT NULL,
+  `title` VARCHAR(255) NOT NULL,
+  `read_count` INT DEFAULT 0,
+  `like_count` INT DEFAULT 0,
+  `comment_count` INT DEFAULT 0,
+  `create_time` DATETIME DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

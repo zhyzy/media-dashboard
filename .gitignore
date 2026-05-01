@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+**/dist/
+dist-ssr/
+
+# Environment files (contain secrets)
+.env
+!.env.example
+!.env.development
+!.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Auto-generated
+*.local
+.auto-import.json
+src/types/import/auto-imports.d.ts
+src/types/import/components.d.ts
+
+# Cache
+.cache/
+.temp/
+
+# Cursor rules
+.cursorrules
+.trae/
+
+# Debug scripts
+server/check-activity.js
+server/check-history-debug.js
+server/clean-sync-history.js
+server/cleanup-seed.js
+server/sync-history-v2.js
