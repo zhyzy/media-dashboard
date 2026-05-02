@@ -1,33 +1,3 @@
-部署后端API：
-
-
-第一步，我把文件上传到服务器了，打开了server，在这个文件夹终端执行了npm install，安装了依赖，然后添加了数据库信息，然后在本文件夹终端执行了npm run build，然后执行了：npm install -g pm2
-pm2 start dist/main.js --name media-api
-pm2 save
-pm2 startup
-
-然后我访问：
-4|media-ap | [Nest] 664383  - 04/29/2026, 7:05:51 PM     LOG [RouterExplorer] Mapped {/api/dataease/keys, GET} route +0ms
-4|media-ap | [Nest] 664383  - 04/29/2026, 7:05:51 PM     LOG [RouterExplorer] Mapped {/api/dataease/keys/:id, DELETE} route +0ms
-4|media-ap | [Nest] 664383  - 04/29/2026, 7:05:51 PM     LOG [RouterExplorer] Mapped {/api/dataease/keys/:id/toggle, POST} route +0ms
-4|media-ap | [Nest] 664383  - 04/29/2026, 7:05:51 PM     LOG [RouterExplorer] Mapped {/api/dataease/datasource/douyin, GET} route +1ms
-4|media-ap | [Nest] 664383  - 04/29/2026, 7:05:51 PM     LOG [RouterExplorer] Mapped {/api/dataease/datasource/kuaishou, GET} route +0ms
-4|media-ap | [Nest] 664383  - 04/29/2026, 7:05:51 PM     LOG [RouterExplorer] Mapped {/api/dataease/datasource/media, GET} route +0ms
-4|media-ap | [Nest] 664383  - 04/29/2026, 7:05:51 PM     LOG [RouterExplorer] Mapped {/api/dataease/datasource/summary, GET} route +0ms
-4|media-ap | [Nest] 664383  - 04/29/2026, 7:05:51 PM     LOG [RouterExplorer] Mapped {/api/dataease/datasource/all, GET} route +1ms
-4|media-ap | [Nest] 664383  - 04/29/2026, 7:05:51 PM     LOG [RouterExplorer] Mapped {/api/dataease/datasource/overview, GET} route +0ms
-4|media-ap | [Nest] 664383  - 04/29/2026, 7:05:51 PM     LOG [RouterExplorer] Mapped {/api/dataease/datasource/tables, GET} route +0ms
-4|media-ap | [Nest] 664383  - 04/29/2026, 7:05:51 PM     LOG [NestApplication] Nest application successfully started +3ms
-4|media-ap | 🚀 服务已启动: http://localhost:3000
-4|media-ap |   - 大屏: http://localhost:3000/
-4|media-ap |   - 后台: http://localhost:3000/admin
-4|media-ap |   - API: http://localhost:3000/api
-
-
-访问：http://localhost:3000   显示：{"message":"Cannot GET /","error":"Not Found","statusCode":404}
-访问：http://localhost:3000/
-访问：http://localhost:3000/admin  {"message":"Cannot GET /admin","error":"Not Found","statusCode":404}
-访问：API: http://localhost:3000/api  	{"message":"Cannot GET /api","error":"Not Found","statusCode":404}
 
 
 
