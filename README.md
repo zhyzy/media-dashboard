@@ -93,8 +93,8 @@
 ### 1. 克隆项目
 
 ```bash
-git clone https://github.com/你的用户名/你的仓库名.git
-cd 你的仓库名
+git clone https://github.com/zhyzy/media-dashboard.git
+cd media-dashboard
 ```
 
 ### 2. 后端配置与启动
